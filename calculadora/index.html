@@ -9,6 +9,7 @@
     <title> Calculadora gradiente </title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/calculator.png" type="image/x-icon">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -27,14 +28,10 @@
     <!-- botões da calculadora -->
     <div class="container">
         <form action="#" name="forms">
-
-
             <input type="text" name="answer">
-
-            
             <div class="buttons">
                 <input type="button" value="AC" onclick="forms.answer.value = ''">
-                <input type="button" value="DEL" onclick="forms.answer.value = forms.answer.value.substr(0, forms.answer.value.lagth -1)">
+                <input type="button" value="DEL" onclick="forms.answer.value = forms.answer.value.substr(0, forms.answer.value.length -1)">
                 <input type="button" value="%" onclick="forms.answer.value += '%'">
                 <input type="button" value="/" onclick="forms.answer.value += '/'">
             </div>
@@ -64,9 +61,12 @@
                 <input type="button" value="0" onclick="forms.answer.value += '0'">
                 <input type="button" value="00" onclick="forms.answer.value += '00'">
                 <input type="button" value="," onclick="forms.answer.value += ','">
-                <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+                <input type="button" value="=" onclick="zero()">
             </div>
     </form>
     </div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
